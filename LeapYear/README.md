@@ -13,9 +13,9 @@ As a user, I want to know if a year is a leap year, So that I can plan for an ex
 
 ### Results:
 ##### Day 1
-![LeapYears Day One](KataLeapYear\ImgResults\resultDayOne.jpg)
+![LeapYears Day One](KataLeapYear/ImgResults/resultDayOne.jpg)
 ##### Day 2
-![LeapYears Day Two](KataLeapYear\ImgResults\resultDayTwo.jpg)
+![LeapYears Day Two](KataLeapYear/ImgResults/resultDayTwo.jpg)
 
 
 Note: Using TDD take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
