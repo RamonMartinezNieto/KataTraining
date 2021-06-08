@@ -22,13 +22,9 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 - Return Buzz  if the number is divisible by 5.
 - Return FizzBuzz  if the number is divisible by 3 & 5.
 
-## Acceptance Criteria Stage 2:
-
-- A number is fizz if it is divisible by 3 or if it has a 3 in it
-- A number is buzz if it is divisible by 5 or if it has a 5 in it
 
 ### Results:
-##### Day 1 - First Iteration 
+##### Iteration 1 - First Iteration (bar result) 
 Stage 1.
 Time: 30 min 
 
