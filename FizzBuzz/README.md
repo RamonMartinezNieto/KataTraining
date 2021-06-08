@@ -24,11 +24,15 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 
 
 ### Results:
-##### Iteration 1 - First Iteration (bar result) 
-Stage 1.
+##### First Iteration (bad solutuion) 
 Time: 30 min 
 
 ![FizzBuzz First Iteration](ImgResults/FizzBuzzDayOne.jpg)
+
+##### Second Iteration (better solution) 
+Time: 40 min 
+
+![FizzBuzz Second Iteration](ImgResults/FizzBuzzIterationTwo.jpg)
 
 
 Note: Using TDD take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.

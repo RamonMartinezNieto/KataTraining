@@ -16,14 +16,12 @@ namespace TestFizzBuzz.IterationTwo
         public string[] GetArrayWithResults()
         {
             string[] results = new string[ARRAY_CPACITY];
-
             for (int i = 1; i <= 100; i++) {
-                if (i % (int)Rules.FizzBuzz == 0) results[i - 1] = Rules.FizzBuzz.ToString();
-                else if (i % (int)Rules.Fizz == 0) results[i - 1] = Rules.Fizz.ToString();
-                else if (i % (int)Rules.Buzz == 0) results[i - 1] = Rules.Buzz.ToString();
-                else results[i - 1] = i.ToString();
+                results[i - 1] = i.ToString();
+                foreach (Rules valRule in Enum.GetValues(typeof(Rules))) {
+                    if (i % (int)valRule == 0)  results[i - 1] = valRule.ToString();
+                }
             }
-            
             return results;
         }
     }
