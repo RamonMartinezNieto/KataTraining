@@ -4,10 +4,6 @@ namespace UnitTestKataLeapYear._3
 {
     public class LeapYearThree
     {
-        public LeapYearThree()
-        {
-        }
-
         public bool IsLeapYear(int year)
         {
             if (year % 400 == 0) return true;

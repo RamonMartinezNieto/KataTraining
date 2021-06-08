@@ -28,26 +28,14 @@ namespace UnitTestKataLeapYear._3
             leapYearThree = new LeapYearThree();
         }
 
-        [Test]
-        public void GivenDisvisibleBy4_CheckIf_IsLeap_True()
+        [TestCase(1999, ExpectedResult = false)]
+        [TestCase(2020, ExpectedResult = true)]
+        [TestCase(2100, ExpectedResult = false)]
+        [TestCase(2000, ExpectedResult = true)]
+        public bool GivenDisvisibleBy4_CheckIf_IsLeap_True(int year)
         {
-            Assert.That(leapYearThree.IsLeapYear(2020), Is.EqualTo(true));
+            return leapYearThree.IsLeapYear(year);
         }
 
-        [Test]
-        public void GivenNumberNotDisivibleBy4_CheckIf_IsLeap_False()
-        {
-            Assert.That(leapYearThree.IsLeapYear(1999), Is.EqualTo(false));
-        }
-
-        [Test]
-        public void GivenNumberDivisibleBy100_CheckIfIsLeap_false() {
-            Assert.That(leapYearThree.IsLeapYear(2100), Is.EqualTo(false));
-        }
-
-        [Test]
-        public void GivenNumberDivisibleBy400_CheckIfIsLeap_false() {
-            Assert.That(leapYearThree.IsLeapYear(2000), Is.EqualTo(true));
-        }
     }
 }
