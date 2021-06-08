@@ -12,10 +12,11 @@ As a user, I want to know if a year is a leap year, So that I can plan for an ex
 - All years not divisible by 4 are NOT leap years (e.g. 2017, 2018, 2019).
 
 ### Results:
-##### Day 1
-![LeapYears Day One](KataLeapYear/ImgResults/resultDayOne.jpg)
-##### Day 2
-![LeapYears Day Two](KataLeapYear/ImgResults/resultDayTwo.jpg)
-
+##### Iteration 1
+![LeapYears Iteration One](KataLeapYear/ImgResults/resultDayOne.jpg)
+##### Iteration 2
+![LeapYears Iteration Two](KataLeapYear/ImgResults/resultDayTwo.jpg)
+##### Iteration 3
+![LeapYears Iteration Three](KataLeapYear/ImgResults/resultIterationThree.jpg)
 
 Note: Using TDD take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
