@@ -11,12 +11,23 @@ As a user, I want to know if a year is a leap year, So that I can plan for an ex
 - All years divisible by 4 but not by 100 ARE leap years (e.g., 2008, 2012, 2016),
 - All years not divisible by 4 are NOT leap years (e.g. 2017, 2018, 2019).
 
-### Results:
-##### Iteration 1
-![LeapYears Iteration One](KataLeapYear/ImgResults/resultDayOne.jpg)
-##### Iteration 2
-![LeapYears Iteration Two](KataLeapYear/ImgResults/resultDayTwo.jpg)
-##### Iteration 3 20 min
-![LeapYears Iteration Three](KataLeapYear/ImgResults/resultIterationThree.jpg)
 
-Note: Using TDD take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
+        [TestCase(1999, ExpectedResult = false)] //Not Divisible by 4
+        [TestCase(2020, ExpectedResult = true)] //Divisible by 4
+        [TestCase(2100, ExpectedResult = false)] //Divisible by 100
+        [TestCase(2000, ExpectedResult = true)] //Divisible by 400
+		
+
+### Results:
+##### [Iteration 1](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/1/TestLeapYearChecker.cs)
+![LeapYears Iteration One](KataLeapYear/ImgResults/resultDayOne.jpg)
+##### [Iteration 2](https://github.com/RamonMartinezNieto/KataTraining/tree/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/2)
+![LeapYears Iteration Two](KataLeapYear/ImgResults/resultDayTwo.jpg)
+##### [Iteration 3 20 min](https://github.com/RamonMartinezNieto/KataTraining/tree/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/3)
+![LeapYears Iteration Three](KataLeapYear/ImgResults/resultIterationThree.jpg)
+##### [Iteration 4 13 min](https://github.com/RamonMartinezNieto/KataTraining/tree/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/4)
+![LeapYears Iteration Four](KataLeapYear/ImgResults/resultIterationFour.jpg)
+
+
+Note: Using TDD 
+take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
