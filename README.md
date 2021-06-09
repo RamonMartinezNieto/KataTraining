@@ -1,6 +1,4 @@
 # Kata Training Repository (TDD) 
----
-
 
 I'm practicing with the TDD methodology to create software. I use this repository to save all the training days, so I can review and check my progress. 
 

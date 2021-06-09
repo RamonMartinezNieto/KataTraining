@@ -1,5 +1,5 @@
 # Kata Leap Years
----
+
 ## Story:
 
 This Kata was posted here by someone anonymously. Michael Feathers and EmilyBache performed it at agile2008 when competing in “Programming with the stars” in python, in 4 minutes.
@@ -24,11 +24,12 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 
 
 ### Results:
-##### First Iteration Time: 30m 
+##### [First Iteration 30m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationOne/IterationOne.cs)
 ![FizzBuzz First Iteration](ImgResults/FizzBuzzDayOne.jpg)
-##### Second Iteration Time: 40m 
+##### [Second Iteration 40m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationTwo/TestFizzBuzzIterationTwo.cs)
 ![FizzBuzz Second Iteration](ImgResults/FizzBuzzIterationTwo.jpg)
-##### Third iteration 17m
+##### [Third iteration 17m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationThree/TestKataFizzBuzz.cs)
 ![FizzBuzz Third Iteration](ImgResults/FizzBuzzIterationThree.jpg)
+
 
 Note: Using TDD take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
