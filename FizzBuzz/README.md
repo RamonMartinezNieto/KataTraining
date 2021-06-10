@@ -30,6 +30,7 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 ![FizzBuzz Second Iteration](ImgResults/FizzBuzzIterationTwo.jpg)
 ##### [Third iteration 17m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationThree/TestKataFizzBuzz.cs)
 ![FizzBuzz Third Iteration](ImgResults/FizzBuzzIterationThree.jpg)
-
+##### [Fourth iteration 20m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationFour/TestFizzBuzz.cs)
+![FizzBuzz Fourth Iteration](ImgResults/FizzBuzzIterationFour.jpg)
 
 Note: Using TDD take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
