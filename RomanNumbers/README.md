@@ -29,9 +29,13 @@ Write a function to convert in the other direction, ie numeral to digit
 
 
 ### Results:
-##### [Iteration 1](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/1/TestLeapYearChecker.cs)
-![LeapYears Iteration One](KataLeapYear/ImgResults/resultDayOne.jpg)
-
+#### [Iteration 1](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/1/TestRomanNumbers.cs)
+```
+Notes:
+- Time: 45 min 
+- I don't like the test class. 
+- I used TDD to develop the algorithm, but I didn't care about the test using Nunit3 (error). 
+```
 
 Note: Using TDD 
 take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
