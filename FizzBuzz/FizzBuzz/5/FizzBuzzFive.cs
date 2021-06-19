@@ -11,6 +11,14 @@ namespace TestFizzBuzz._5
     public class FizzBuzzFive
     {
         public const int LENGHT_ARRAY = 100;
+        public string[] arrayFilled; 
+
+        public enum RULES : int 
+        {
+            FizzBuzz = 15,
+            Buzz = 5,
+            Fizz = 3
+        }
 
         public string[] GetResultsInArray()
         {
@@ -18,10 +26,11 @@ namespace TestFizzBuzz._5
 
             for (int i = 0; i < arrayFilled.Length; i++) 
             {
-                if ((i + 1) % 15 == 0) arrayFilled[i] = "FizzBuzz";
-                else if ((i + 1) % 5 == 0) arrayFilled[i] = "Buzz";
-                else if ((i + 1) % 3 == 0) arrayFilled[i] = "Fizz";
-                else arrayFilled[i] = (i + 1).ToString();
+                arrayFilled[i] = (i + 1).ToString();
+                foreach (RULES r in Enum.GetValues(typeof(RULES)))
+                {
+                    if ((i + 1) % (int)r == 0) arrayFilled[i] = r.ToString();
+                }
             }
 
             return arrayFilled;
