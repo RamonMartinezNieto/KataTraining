@@ -36,6 +36,11 @@ Notes:
 - I don't like the test class. 
 - I used TDD to develop the algorithm, but I didn't care about the test using Nunit3 (error). 
 ```
-
+#### [Iteration 2](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/1/TestRomanNumbers.cs)
+```
+Notes:
+- Time: 35 min 
+- I extract the algorithm only seeing the differents sceneraions when I build it. (nice!)
+```
 Note: Using TDD 
 take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.

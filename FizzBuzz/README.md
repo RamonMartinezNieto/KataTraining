@@ -17,20 +17,19 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 #### Difficulty: Easy 
 
 ## Acceptance Criteria Stage 1:
-
+- Array should  only 100 positionshas 
 - Return Fizz if the number is divisible by 3.
 - Return Buzz  if the number is divisible by 5.
 - Return FizzBuzz  if the number is divisible by 3 & 5.
-
+- Rest of positions should has the number of the position
 
 ### Results:
-##### [First Iteration 30m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationOne/IterationOne.cs)
-![FizzBuzz First Iteration](ImgResults/FizzBuzzDayOne.jpg)
-##### [Second Iteration 40m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationTwo/TestFizzBuzzIterationTwo.cs)
-![FizzBuzz Second Iteration](ImgResults/FizzBuzzIterationTwo.jpg)
-##### [Third iteration 17m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationThree/TestKataFizzBuzz.cs)
-![FizzBuzz Third Iteration](ImgResults/FizzBuzzIterationThree.jpg)
-##### [Fourth iteration 20m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationFour/TestFizzBuzz.cs)
-![FizzBuzz Fourth Iteration](ImgResults/FizzBuzzIterationFour.jpg)
+- [First Iteration 30m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationOne/IterationOne.cs)
+- [Second Iteration 40m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationTwo/TestFizzBuzzIterationTwo.cs)
+- [Third iteration 17m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationThree/TestKataFizzBuzz.cs)
+- [Fourth iteration 20m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationFour/TestFizzBuzz.cs)
+- [Fifth iteration 17m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/5/TestFizzBuzz.cs)
+
+
 
 Note: Using TDD take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.

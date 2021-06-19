@@ -19,16 +19,13 @@ As a user, I want to know if a year is a leap year, So that I can plan for an ex
 		
 
 ### Results:
-##### [Iteration 1](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/1/TestLeapYearChecker.cs)
-![LeapYears Iteration One](KataLeapYear/ImgResults/resultDayOne.jpg)
-##### [Iteration 2](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/3/LeapYearIterationThree.cs)
-![LeapYears Iteration Two](KataLeapYear/ImgResults/resultDayTwo.jpg)
-##### [Iteration 3 20 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/2/TestLeapYearDos.cs)
-![LeapYears Iteration Three](KataLeapYear/ImgResults/resultIterationThree.jpg)
-##### [Iteration 4 13 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/4/TestLeapYearIteration4.cs)
-![LeapYears Iteration Four](KataLeapYear/ImgResults/resultIterationFour.jpg)
-##### [Iteration 5 15 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/5/TestLeapYearFive.cs)
-![LeapYears Iteration Five](KataLeapYear/ImgResults/resultIterationFive.jpg)
+- [Iteration 1](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/1/TestLeapYearChecker.cs)
+- [Iteration 2](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/3/LeapYearIterationThree.cs)
+- [Iteration 3 20 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/2/TestLeapYearDos.cs)
+- [Iteration 4 13 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/4/TestLeapYearIteration4.cs)
+- [Iteration 5 15 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/5/TestLeapYearFive.cs)
+- [Iteration 6 10 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/6/TestKataLeapYear.cs)
+
 
 
 
