@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 /*
  * Roman Numbers Rules
@@ -10,12 +11,14 @@
  * I, V, X, L, C, D, M
  * 1,5,10,50, 100, 500, 1000 
  * 
- * Note: From 5000 to XX there is an special annotation adding 
- * underscore up the letter.
+ * Note: From 5000 to XX there is an special annotation adding underline up.
+ * 
+ * \u0305 => Add underline
  * 
  */
 namespace TestRomanNumbers._2
 {
+    [TestFixture]
     class TestRomanNumbers2
     {
         RomanNumbers2 romanNumber;
@@ -162,5 +165,23 @@ namespace TestRomanNumbers._2
         {
             Assert.That(romanNumber.ConvertToRomanNumber(1000), Is.EqualTo("M"));
         }
+
+        [TestCase(2343, ExpectedResult = "MMCCCXLIII")]
+        [TestCase(3444, ExpectedResult = "MMMCDXLIV")]
+        [TestCase(1232, ExpectedResult = "MCCXXXII")]
+        [TestCase(787, ExpectedResult = "DCCLXXXVII")]
+        public string TestRandomNumbers(int input)
+        {
+            return romanNumber.ConvertToRomanNumber(input);
+        }
+
+        [Test]
+        public void ShouldThrowExceptionWhenIs0orMinus()
+        {
+            var ex = Assert.Throws<Exception>(() => romanNumber.ConvertToRomanNumber(0));
+            Assert.That(ex.Message, Is.EqualTo("Invalid number"));
+          
+        }
+
     }
 }
