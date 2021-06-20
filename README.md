@@ -8,4 +8,4 @@ I will use Java with JUnit5 and Mockito if needed and C# with NUnit3 and MOQ if 
 
 * [Leap Year](https://github.com/RamonMartinezNieto/KataTraining/tree/master/LeapYear)
 *  [FizzBuzz](https://github.com/RamonMartinezNieto/KataTraining/tree/master/FizzBuzz)
-*  [RomanNumber](https://github.com/RamonMartinezNieto/KataTraining/tree/master/RomanNumbers)
+*  [RomanNumerals](https://github.com/RamonMartinezNieto/KataTraining/tree/master/RomanNumbers)

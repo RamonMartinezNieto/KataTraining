@@ -1,4 +1,4 @@
-# Kata Roman Numbers
+# Kata Roman Numerals
 
 [Text from Coding Dojo](https://codingdojo.org/kata/RomanNumerals/)
 
