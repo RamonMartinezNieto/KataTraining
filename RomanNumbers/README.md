@@ -42,5 +42,12 @@ Notes:
 - Time: 35 min 
 - I extract the algorithm only seeing the differents sceneraions when I build it. (nice!)
 ```
+
+#### [Iteration 3](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/3/TestKataRomanNumerals.cs)
+```
+Notes:
+- Time: 33 min 
+- Some redundant test
+```
 Note: Using TDD 
 take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
