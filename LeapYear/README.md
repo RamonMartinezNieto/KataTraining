@@ -25,6 +25,7 @@ As a user, I want to know if a year is a leap year, So that I can plan for an ex
 - [Iteration 4 13 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/4/TestLeapYearIteration4.cs)
 - [Iteration 5 15 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/5/TestLeapYearFive.cs)
 - [Iteration 6 10 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/6/TestKataLeapYear.cs)
+- [Iteration 7 5 min](https://github.com/RamonMartinezNieto/KataTraining/blob/master/LeapYear/KataLeapYear/UnitTestKataLeapYear/7/TestKataLeapYear.cs)
 
 
 
