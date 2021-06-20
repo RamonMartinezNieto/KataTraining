@@ -1,4 +1,4 @@
-# Kata Leap Years
+# Kata FizzBuzz
 
 ## Story:
 
@@ -29,6 +29,7 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 - [Third iteration 17m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationThree/TestKataFizzBuzz.cs)
 - [Fourth iteration 20m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/IterationFour/TestFizzBuzz.cs)
 - [Fifth iteration 17m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/5/TestFizzBuzz.cs)
+- [Sixth iteration 18m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/FizzBuzz/TestFizzBuzz/6/TestKataFizzBuzz.cs)
 
 
 
