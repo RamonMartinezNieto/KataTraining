@@ -29,25 +29,10 @@ Write a function to convert in the other direction, ie numeral to digit
 
 
 ### Results:
-#### [Iteration 1](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/1/TestRomanNumbers.cs)
-```
-Notes:
-- Time: 45 min 
-- I don't like the test class. 
-- I used TDD to develop the algorithm, but I didn't care about the test using Nunit3 (error). 
-```
-#### [Iteration 2](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/1/TestRomanNumbers.cs)
-```
-Notes:
-- Time: 35 min 
-- I extract the algorithm only seeing the differents sceneraions when I build it. (nice!)
-```
+#### [Iteration 1 : 45m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/1/TestRomanNumbers.cs)
+#### [Iteration 2 : 35m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/1/TestRomanNumbers.cs)
+#### [Iteration 3 : 33](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/3/TestKataRomanNumerals.cs)
+#### [Iteration 4 : 25](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/4/TestKataRomanNumerals.cs)
 
-#### [Iteration 3](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/3/TestKataRomanNumerals.cs)
-```
-Notes:
-- Time: 33 min 
-- Some redundant test
-```
 Note: Using TDD 
 take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
