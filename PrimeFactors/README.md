@@ -12,5 +12,6 @@ Write a class named “PrimeFactors” that has one static method: generate.
 ### Results:
 #### [Iteration 1 : 25m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/PrimeFactors/TestPrimeFactors/1/TestPrimeFactors.cs)
 #### [Iteration 2 : 20m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/PrimeFactors/TestPrimeFactors/2/PrimeFactorsTwo.cs)
+#### [Iteration 3 : 20m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/PrimeFactors/TestPrimeFactors/3/TestPrimeFactors.cs)
 
 

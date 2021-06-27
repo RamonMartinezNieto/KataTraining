@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TestPrimeFactors._2
+namespace TestPrimeFactors._3
 {
-    public class PrimeFctrosSecond
+    public class PrimeFactorsTrhee
     {
         public List<int> GetPrimeFactors(int number)
         {
-            List<int> primeNumbersList = new List<int>();
-
+            List<int> primeFactors = new List<int>();
 
             for (int i = 2; i <= number; i++) 
-            {
+            { 
                 while (number % i == 0) 
                 {
-                    primeNumbersList.Add(i);
+                    primeFactors.Add(i);
                     number /= i;
                 }
             }
-            return primeNumbersList;
+            return primeFactors;
         }
     }
 }

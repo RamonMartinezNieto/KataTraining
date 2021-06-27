@@ -38,7 +38,7 @@ namespace TestPrimeFactors._2
         [Test]
         public void ShouldBeOneTheNumberThatDoesnthaveAFactorPrime() 
         {
-            CollectionAssert.AreEquivalent(primeFactors.GetPrimeFactors(1), new List<int>() { 1 });
+            CollectionAssert.AreEquivalent(primeFactors.GetPrimeFactors(1), new List<int>() {  });
         }
 
         [Test]
