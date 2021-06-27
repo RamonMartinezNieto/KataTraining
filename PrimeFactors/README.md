@@ -1,7 +1,6 @@
 # Kata Prime Factors
 
 [Text from Uncle Bob](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata) <br/>
-[Presentation document by Uncle Bob](http://butunclebob.com/files/downloads/Prime%20Factors%20Kata.ppt)
 
 ## Problem Description:
 Write a class named “PrimeFactors” that has one static method: generate.

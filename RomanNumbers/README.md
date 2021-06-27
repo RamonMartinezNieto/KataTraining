@@ -33,6 +33,7 @@ Write a function to convert in the other direction, ie numeral to digit
 #### [Iteration 2 : 35m](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/1/TestRomanNumbers.cs)
 #### [Iteration 3 : 33](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/3/TestKataRomanNumerals.cs)
 #### [Iteration 4 : 25](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/4/TestKataRomanNumerals.cs)
+#### [Iteration 5 : 20](https://github.com/RamonMartinezNieto/KataTraining/blob/master/RomanNumbers/TestRomanNumbers/5/TestKataRomanNumerals.cs)
 
 Note: Using TDD 
 take me more training time, I started with this Kata because of a recomedation in a book to feel better with the TDD metodology.
