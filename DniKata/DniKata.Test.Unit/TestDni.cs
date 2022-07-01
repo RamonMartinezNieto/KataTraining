@@ -9,10 +9,3 @@ public class TestDni
         var dni = new DniKata("31970165G"); //happy path
     }
 }
-
-public class DniKata
-{
-    public DniKata(string dniValue)
-    {
-    }
-}
