@@ -31,5 +31,15 @@ public class TestDni
         dniIncorrectLenght.Should()
             .Throw<ArgumentException>()
             .WithMessage("Length of dniValue is more than nine");
+    }    
+
+    [Fact]
+    public void ShouldThrowArgumentException_IfStringLength_IsLessThanNine()
+    {
+        Action dniIncorrectLenght = () => new DniKata("3197016G");
+        
+        dniIncorrectLenght.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Length of dniValue is less than nine");
     }
 }
