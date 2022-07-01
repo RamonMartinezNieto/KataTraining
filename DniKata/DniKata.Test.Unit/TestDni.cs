@@ -21,5 +21,17 @@ public class TestDni
         actNull.Should()
             .Throw<ArgumentException>()
             .WithMessage("dniValue should contains value");
+    }    
+    
+    [Fact]
+    public void ShouldThrowArgumentException_IfStringLength_IsMoreThanNine()
+    {
+        Action dniIncorrectLenght = () => new DniKata("319701650G");
+        
+        dniIncorrectLenght.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Length of dniValue is more than nine");
+
+
     }
 }
