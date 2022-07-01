@@ -6,10 +6,21 @@ public class DniKata
 
     public DniKata(string dniValue)
     {
+        CheckIfThereIsValue(dniValue);
+
+        CheckCorrectLength(dniValue);
+    }
+    private static void CheckIfThereIsValue(string dniValue)
+    {
         if (string.IsNullOrEmpty(dniValue))
             throw new ArgumentException("dniValue should contains value");
+    }
 
-        if(dniValue.Length > MAX_LENGTH_DNI)
+    private static void CheckCorrectLength(string dniValue)
+    {
+        if (dniValue.Length > MAX_LENGTH_DNI)
             throw new ArgumentException("Length of dniValue is more than nine");
     }
+
+
 }
