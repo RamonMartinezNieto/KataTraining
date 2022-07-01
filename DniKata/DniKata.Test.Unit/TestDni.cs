@@ -31,7 +31,5 @@ public class TestDni
         dniIncorrectLenght.Should()
             .Throw<ArgumentException>()
             .WithMessage("Length of dniValue is more than nine");
-
-
     }
 }
