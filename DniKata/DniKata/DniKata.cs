@@ -19,10 +19,7 @@ public class DniKata
 
     private static void CheckCorrectLength(string dniValue)
     {
-        if (dniValue.Length > MAX_LENGTH_DNI)
-            throw new ArgumentException("Length of dniValue is more than nine");
-        
-        if (dniValue.Length < MAX_LENGTH_DNI)
-            throw new ArgumentException("Length of dniValue is less than nine");
+        if(!dniValue.Length.Equals(MAX_LENGTH_DNI))
+            throw new ArgumentException("Length of dniValue is invalid. Correct length is nine.");
     }
 }
