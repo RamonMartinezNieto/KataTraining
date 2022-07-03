@@ -68,13 +68,14 @@ public class TestDni
     }
     
     [Fact]
-    public void FirstCharacter_CanBe_XCharacter()
+    public void FirstCharacter_CannotBe_Character_ExceptXYZ()
     {
-        Action act = () => new Dni("S1404966B"); //nie happy path
+        Action act = () => new Dni("S1404966B"); 
 
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("The first character cannot be a character except X, Y or Z.");
-    }
+    }    
+
 
 }
