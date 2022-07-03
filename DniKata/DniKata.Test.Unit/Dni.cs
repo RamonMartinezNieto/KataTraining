@@ -12,6 +12,11 @@ internal class Dni
         if (dniValue[^1].Equals('U')) 
         {
             throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
+        }     
+        
+        if (dniValue[^1].Equals('I')) 
+        {
+            throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
         }
     }
 
