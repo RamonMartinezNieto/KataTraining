@@ -9,6 +9,10 @@ internal class Dni
         CheckCorrectLength(dniValue);
         CheckIfLastCharacterIsLetter(dniValue);
 
+        if (dniValue[^1].Equals('U')) 
+        {
+            throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
+        }
     }
 
     private static void CheckCorrectLength(string dniValue)
@@ -16,6 +20,7 @@ internal class Dni
         if (!dniValue.Length.Equals(MAX_DNI_LENGTH))
             throw new ArgumentException("Lenght should be nine.");
     }
+
     private static void CheckIfLastCharacterIsLetter(string dniValue)
     {
         if (!char.IsLetter(dniValue[^1]))
