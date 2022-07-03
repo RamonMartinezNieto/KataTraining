@@ -4,9 +4,9 @@ internal class Dni
 {
     private const int MAX_DNI_LENGTH = 9;
 
-    public Dni(string v)
+    public Dni(string dniValue)
     {
-        if (!v.Length.Equals(MAX_DNI_LENGTH))
+        if (!dniValue.Length.Equals(MAX_DNI_LENGTH))
             throw new ArgumentException("Lenght should be nine.");
     }
 }
