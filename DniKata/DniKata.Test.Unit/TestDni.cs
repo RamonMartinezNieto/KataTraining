@@ -92,6 +92,13 @@ public class TestDni
         // no exception, test pass if there isn't a exception
         Dni dni = new ("Y1404966B"); 
     }    
+            
+    [Fact]
+    public void FirstCharacter_CanBe_Z()
+    {
+        // no exception, test pass if there isn't a exception
+        Dni dni = new ("Z1404966B"); 
+    }    
 
 
 }

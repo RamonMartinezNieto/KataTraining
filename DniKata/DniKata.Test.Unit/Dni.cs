@@ -14,7 +14,7 @@ internal class Dni
         var firstCharacter = dniValue[0];
         if (char.IsLetter(firstCharacter))
         {
-            if(!firstCharacter.Equals('X') && !firstCharacter.Equals('Y')) 
+            if(!firstCharacter.Equals('X') && !firstCharacter.Equals('Y') && !firstCharacter.Equals('Z')) 
                 throw new ArgumentException("The first character cannot be a character except X, Y or Z.");            
             
         }
