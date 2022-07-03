@@ -91,9 +91,19 @@ public class TestDni
     }
 
     [Fact]
-    public void ModOf23IntPart_ShouldBeComparedWithTheLetter_T()
+    public void WhenModOf23IntPart_Is0_ShouldBeComparedWithTheLetter_T()
     {
         Action act = () => new Dni("00000000R");
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Invalid letter.");
+    }    
+    
+    [Fact]
+    public void WhenModOf23IntPart_Is0_ShouldBeComparedWithTheLetter_R()
+    {
+        Action act = () => new Dni("00000001S");
 
         act.Should()
             .Throw<ArgumentException>()

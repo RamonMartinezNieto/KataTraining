@@ -16,9 +16,21 @@ public class Dni
         CheckIntCharsInDni(dniValue);
         CheckIfCorrectFirstCharacter(dniValue);
 
-        if (!IsFirstCharacterALetter(dniValue)) { 
+        CheckIfValidLastLetter(dniValue);
+    }
+
+    private static void CheckIfValidLastLetter(string dniValue)
+    {
+        if (!IsFirstCharacterALetter(dniValue))
+        {
             int tempDniValue = Convert.ToInt32(dniValue[0..7]);
+
             if (tempDniValue % 23 == 0 && !dniValue[^1].Equals('T'))
+            {
+                throw new ArgumentException("Invalid letter.");
+            }
+
+            if (tempDniValue % 23 == 1 && !dniValue[^1].Equals('R'))
             {
                 throw new ArgumentException("Invalid letter.");
             }
