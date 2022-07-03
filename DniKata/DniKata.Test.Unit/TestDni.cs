@@ -119,5 +119,15 @@ public class TestDni
             .Throw<ArgumentException>()
             .WithMessage("Invalid letter.");
     }
+    
+    [Fact]
+    public void WhenModOf23IntPart_Is3_ShouldBeComparedWithTheLetter_A()
+    {
+        Action act = () => new Dni("00000003P");
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Invalid letter.");
+    }
 
 }

@@ -14,6 +14,7 @@ public class Dni
         {0,'T'},
         {1,'R'},
         {2,'W'},
+        {3,'A'},
     };
 
     public Dni(string dniValue)
@@ -31,7 +32,7 @@ public class Dni
     {
         if (!IsFirstCharacterALetter(dniValue))
         {
-            int tempDniValue = Convert.ToInt32(dniValue[0..7]);
+            int tempDniValue = Convert.ToInt32(dniValue[0..8]);
 
             foreach (var item in LETTERS_RULES) 
             {
