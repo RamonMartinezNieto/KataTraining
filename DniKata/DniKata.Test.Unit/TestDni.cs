@@ -16,12 +16,6 @@ namespace DniKata.Test.Unit;
 
 public class TestDni
 {
-    //First tests are to implement the clas
-    [Fact]
-    public void ShouldCreateDniValueObject() 
-    {
-        Dni dni = new("34272318H"); //Using happy path to avoid the fail of the test in the future. 
-    }
 
     [Fact]
     public void Lenght_ShouldBe_LessThanTen() 
