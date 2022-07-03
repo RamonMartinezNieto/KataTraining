@@ -20,7 +20,7 @@ public class TestDni
     [Theory]
     [InlineData("342723180H")]
     [InlineData("3427231H")]
-    public void Lenght_ShouldBe_Nine(string value) 
+    public void Lenght_ShouldBe_Nine(string value)
     {
         Action act = () => new Dni(value);
 
@@ -30,7 +30,7 @@ public class TestDni
     }
 
     [Fact]
-    public void LastCharacter_ShoulBe_Character() 
+    public void LastCharacter_ShoulBe_Character()
     {
         Action act = () => new Dni("342723180"); //sad path
 
@@ -44,33 +44,33 @@ public class TestDni
     [InlineData("34272318I")]//sad path
     [InlineData("34272318O")]//sad path
     [InlineData("34272318Ñ")]//sad path
-    public void LastCharacter_CannotBe_U_I_O_NWithTilde(string value) 
+    public void LastCharacter_CannotBe_U_I_O_NWithTilde(string value)
     {
-        Action act = () => new Dni(value); 
+        Action act = () => new Dni(value);
 
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("The last character cannot be U, I, O, or Ñ.");
     }
-    
+
     [Fact]
     public void FirstCharacter_CannotBe_Character_ExceptXYZ()
     {
-        Action act = () => new Dni("S1404966B"); 
+        Action act = () => new Dni("S1404966B");
 
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("The first character cannot be a character except X, Y or Z.");
-    }    
+    }
 
     [Theory]
-    [InlineData("X1404966B")]
-    [InlineData("Y1404966B")]
-    [InlineData("Z1404966B")]
+    [InlineData("X0000000T")] //happy path
+    [InlineData("Y0000000R")] //happy path
+    [InlineData("Z0000000W")] //happy path
     public void FirstCharacter_CanBe_XYZ(string value)
     {
         // no exception, test pass if there isn't a exception  and fail with an exceptioin
-        Dni dni = new (value); 
+        Dni dni = new(value);
     }
 
     [Theory]
@@ -81,7 +81,7 @@ public class TestDni
     [InlineData("30272R18H")]
     [InlineData("302723R8H")]
     [InlineData("3027231RH")]
-    public void Characters_1To7_ShouldBeInt(string value) 
+    public void Characters_1To7_ShouldBeInt(string value)
     {
         Action act = () => new Dni(value);
 
@@ -100,7 +100,7 @@ public class TestDni
     [InlineData("00000005P")]
     [InlineData("00000006P")]
     [InlineData("00000007P")]
-    [InlineData("00000008Z")]    
+    [InlineData("00000008Z")]
     [InlineData("00000009R")]
     [InlineData("00000010R")]
     [InlineData("00000011S")]
@@ -125,13 +125,33 @@ public class TestDni
     }
 
     [Fact]
-    public void WhenFirstLetterIsX_ItConvertTo0_And_IFModOf23IntPartIs0_ShouldBeComparedWithTheLetter_T()
+    public void WhenFirstLetterIsX_ItConvertTo0_And_IFModOf23IntPartIs0_ShouldThrowExceptionIfTheLetterIsNot_T()
     {
         Action act = () => new Dni("X0000000R");
 
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("Invalid letter.");
-    }    
+    }
+
+    [Fact]
+    public void WhenFirstLetterIsY_ItConvertTo1_And_IFModOf23IntPartIs1_ShouldThrowExceptionIfTheLetterIsNot_R()
+    {
+        Action act = () => new Dni("Y0000000P");
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Invalid letter.");
+    }
     
+    [Fact]
+    public void WhenFirstLetterIsZ_ItConvertTo2_And_IFModOf23IntPartIs2_ShouldThrowExceptionIfTheLetterIsNot_W()
+    {
+        Action act = () => new Dni("Y0000000P");
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Invalid letter.");
+    }
+
 }

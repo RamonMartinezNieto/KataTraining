@@ -63,6 +63,32 @@ public class Dni
                         throw new ArgumentException("Invalid letter.");
                     }
                 }
+            }  
+            
+            if (dniValue[0].Equals('Y')) 
+            {
+                tempDniValue = Convert.ToInt32(dniValue[1..8]) + 1;
+
+                foreach (var item in LETTERS_RULES)
+                {
+                    if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
+                    {
+                        throw new ArgumentException("Invalid letter.");
+                    }
+                }
+            }          
+
+            if (dniValue[0].Equals('Z')) 
+            {
+                tempDniValue = Convert.ToInt32(dniValue[1..8]) + 2;
+
+                foreach (var item in LETTERS_RULES)
+                {
+                    if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
+                    {
+                        throw new ArgumentException("Invalid letter.");
+                    }
+                }
             }
         }
 
