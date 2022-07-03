@@ -53,43 +53,18 @@ public class TestDni
             .WithMessage("Last character should be a character.");
     }
 
-    [Fact]
-    public void LastCharacter_CannotBe_U() 
+    [Theory]
+    [InlineData("34272318U")]//sad path
+    [InlineData("34272318I")]//sad path
+    [InlineData("34272318O")]//sad path
+    [InlineData("34272318Ñ")]//sad path
+    public void LastCharacter_CannotBe_U_I_O_NWithTilde(string value) 
     {
-        Action act = () => new Dni("34272318U"); //sad path
+        Action act = () => new Dni(value); 
 
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("The last character cannot be U, I, O, or Ñ.");
     }
 
-    [Fact]
-    public void LastCharacter_CannotBe_I() 
-    {
-        Action act = () => new Dni("34272318I"); //sad path
-
-        act.Should()
-            .Throw<ArgumentException>()
-            .WithMessage("The last character cannot be U, I, O, or Ñ.");
-    }
-
-    [Fact]
-    public void LastCharacter_CannotBe_O() 
-    {
-        Action act = () => new Dni("34272318O"); //sad path
-
-        act.Should()
-            .Throw<ArgumentException>()
-            .WithMessage("The last character cannot be U, I, O, or Ñ.");
-    }
-
-    [Fact]
-    public void LastCharacter_CannotBe_Eje_NWithTilde() 
-    {
-        Action act = () => new Dni("34272318Ñ"); //sad path
-
-        act.Should()
-            .Throw<ArgumentException>()
-            .WithMessage("The last character cannot be U, I, O, or Ñ.");
-    }
 }
