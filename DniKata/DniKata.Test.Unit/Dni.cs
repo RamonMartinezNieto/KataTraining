@@ -6,5 +6,9 @@ internal class Dni
     {
         if (v.Length > 9)
             throw new ArgumentException("Lenght should be nine.");
+
+        if (v.Length < 9)
+            throw new ArgumentException("Lenght should be nine.");
+
     }
 }

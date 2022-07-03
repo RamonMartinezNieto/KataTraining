@@ -32,5 +32,15 @@ public class TestDni
             .Throw<ArgumentException>()
             .WithMessage("Lenght should be nine.");
     }
+    
+    [Fact]
+    public void Lenght_ShouldBe_MoreThanEight() 
+    {
+        Action act = () => new Dni("3427231H"); //wrong DNI 
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Lenght should be nine.");
+    }
 
 }
