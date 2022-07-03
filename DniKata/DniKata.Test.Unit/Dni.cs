@@ -10,6 +10,15 @@ internal class Dni
         CheckCorrectLength(dniValue);
         CheckIfLastCharacterIsLetter(dniValue);
         CheckLastCharacter(dniValue);
+
+        var firstCharacter = dniValue[0];
+        if (char.IsLetter(firstCharacter))
+        {
+            if (!firstCharacter.Equals('X')) 
+            {
+                throw new ArgumentException("The first character cannot be a character except X, Y or Z.");
+            }
+        }
     }
 
 

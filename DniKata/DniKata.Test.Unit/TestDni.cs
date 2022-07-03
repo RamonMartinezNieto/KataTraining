@@ -66,5 +66,15 @@ public class TestDni
             .Throw<ArgumentException>()
             .WithMessage("The last character cannot be U, I, O, or Ñ.");
     }
+    
+    [Fact]
+    public void FirstCharacter_CanBe_XCharacter()
+    {
+        Action act = () => new Dni("S1404966B"); //nie happy path
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("The first character cannot be a character except X, Y or Z.");
+    }
 
 }
