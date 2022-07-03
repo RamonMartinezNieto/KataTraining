@@ -14,17 +14,8 @@ public class Dni
         CheckIfLastCharacterIsLetter(dniValue);
         CheckLastCharacter(dniValue);
         CheckIfCorrectFirstCharacter(dniValue);
-
-        if (char.IsLetter(dniValue[1]))
-            throw new ArgumentException("First 8 character should be int, first one can be X, Y, Z for NIE.");
-
-        if (char.IsLetter(dniValue[2]))
-            throw new ArgumentException("First 8 character should be int, first one can be X, Y, Z for NIE.");
-        
-        if (char.IsLetter(dniValue[3]))
-            throw new ArgumentException("First 8 character should be int, first one can be X, Y, Z for NIE.");
+        CheckIntCharsInDni(dniValue);
     }
-
 
     private static void CheckCorrectLength(string dniValue)
     {
@@ -48,5 +39,14 @@ public class Dni
     {
         if (char.IsLetter(dniValue[0]) && !VALIDS_FIRST_CHARS.Contains(dniValue[0]))
             throw new ArgumentException("The first character cannot be a character except X, Y or Z.");
+    }
+
+    private static void CheckIntCharsInDni(string dniValue)
+    {
+        for (int i = 1; i < MAX_DNI_LENGTH - 1; i++)
+        {
+            if (char.IsLetter(dniValue[i]))
+                throw new ArgumentException("First 8 character should be int, first one can be X, Y, Z for NIE.");
+        }
     }
 }
