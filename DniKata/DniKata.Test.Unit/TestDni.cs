@@ -66,7 +66,17 @@ public class TestDni
     [Fact]
     public void LastCharacter_CannotBe_I() 
     {
-        Action act = () => new Dni("34272318U"); //sad path
+        Action act = () => new Dni("34272318I"); //sad path
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("The last character cannot be U, I, O, or Ñ.");
+    }
+
+    [Fact]
+    public void LastCharacter_CannotBe_O() 
+    {
+        Action act = () => new Dni("34272318O"); //sad path
 
         act.Should()
             .Throw<ArgumentException>()
