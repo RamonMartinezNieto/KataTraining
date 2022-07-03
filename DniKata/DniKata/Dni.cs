@@ -34,6 +34,13 @@ public class Dni
         {20,'C'},
         {21,'K'},
         {22,'E'},
+    }; 
+    
+    private static Dictionary<int, char> FIRST_LETTERS_RULES = new()
+    {
+        {0,'X'},
+        {1,'Y'},
+        {2,'Z'}
     };
 
     public Dni(string dniValue)
@@ -52,19 +59,12 @@ public class Dni
 
         if (IsFirstCharacterALetter(dniValue)) 
         {
-            if (dniValue[0].Equals('X')) 
+            foreach (var item in FIRST_LETTERS_RULES) 
             {
-                tempDniValue = Convert.ToInt32(dniValue[1..8]);
-            }  
-            
-            if (dniValue[0].Equals('Y')) 
-            {
-                tempDniValue = Convert.ToInt32(dniValue[1..8]) + 1;
-            }          
-
-            if (dniValue[0].Equals('Z')) 
-            {
-                tempDniValue = Convert.ToInt32(dniValue[1..8]) + 2;
+                if (dniValue[0].Equals(item.Value))
+                {
+                    tempDniValue = Convert.ToInt32(dniValue[1..8]) + item.Key;
+                }
             }
 
             foreach (var item in LETTERS_RULES)
