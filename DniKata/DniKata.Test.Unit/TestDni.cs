@@ -90,44 +90,18 @@ public class TestDni
            .WithMessage("First 8 character should be int, first one can be X, Y, Z for NIE.");
     }
 
-    [Fact]
-    public void WhenModOf23IntPart_Is0_ShouldBeComparedWithTheLetter_T()
+    [Theory]
+    [InlineData("00000000R")]
+    [InlineData("00000001S")]
+    [InlineData("00000002S")]
+    [InlineData("00000003P")]
+    public void WhenModOf23IntPart_Is0_ShouldBeComparedWithTheLetter_T(string value)
     {
-        Action act = () => new Dni("00000000R");
+        Action act = () => new Dni(value);
 
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("Invalid letter.");
     }    
     
-    [Fact]
-    public void WhenModOf23IntPart_Is1_ShouldBeComparedWithTheLetter_R()
-    {
-        Action act = () => new Dni("00000001S");
-
-        act.Should()
-            .Throw<ArgumentException>()
-            .WithMessage("Invalid letter.");
-    }
-
-    [Fact]
-    public void WhenModOf23IntPart_Is2_ShouldBeComparedWithTheLetter_W()
-    {
-        Action act = () => new Dni("00000002S");
-
-        act.Should()
-            .Throw<ArgumentException>()
-            .WithMessage("Invalid letter.");
-    }
-    
-    [Fact]
-    public void WhenModOf23IntPart_Is3_ShouldBeComparedWithTheLetter_A()
-    {
-        Action act = () => new Dni("00000003P");
-
-        act.Should()
-            .Throw<ArgumentException>()
-            .WithMessage("Invalid letter.");
-    }
-
 }
