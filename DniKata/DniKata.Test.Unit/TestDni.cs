@@ -77,5 +77,13 @@ public class TestDni
             .WithMessage("The first character cannot be a character except X, Y or Z.");
     }    
 
+        
+    [Fact]
+    public void FirstCharacter_CanBe_X()
+    {
+        // no exception, test pass if there isn't a exception
+        Dni dni = new ("X1404966B"); 
+    }    
+
 
 }
