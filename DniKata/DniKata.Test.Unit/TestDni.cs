@@ -20,7 +20,17 @@ public class TestDni
     [Fact]
     public void ShouldCreateDniValueObject() 
     {
-        Dni dni = new("00000001K");
+        Dni dni = new("34272318H"); //Using happy path to avoid the fail of the test in the future. 
+    }
+
+    [Fact]
+    public void Lenght_ShouldBe_LessThanTen() 
+    {
+        Action act = () => new Dni("342723180H"); //wrong DNI 
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Lenght should be nine.");
     }
 
 }
