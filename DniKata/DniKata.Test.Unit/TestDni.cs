@@ -90,4 +90,10 @@ public class TestDni
            .WithMessage("First 8 character should be int, first one can be X, Y, Z for NIE.");
     }
 
+    //[Fact]
+    //public void ShouldThrowException_IfCannotConvertX_To0() 
+    //{
+    //    Action act = () => new Dni("X0000000R");
+    //}
+
 }

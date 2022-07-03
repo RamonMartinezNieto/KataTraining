@@ -12,9 +12,10 @@ public class Dni
     {
         CheckCorrectLength(dniValue);
         CheckIfLastCharacterIsLetter(dniValue);
-        CheckLastCharacter(dniValue);
-        CheckIfCorrectFirstCharacter(dniValue);
+        CheckLastCharacterIfItIsValid(dniValue);
         CheckIntCharsInDni(dniValue);
+        CheckIfCorrectFirstCharacter(dniValue);
+
     }
 
     private static void CheckCorrectLength(string dniValue)
@@ -29,15 +30,26 @@ public class Dni
             throw new ArgumentException("Last character should be a character.");
     }
 
-    private static void CheckLastCharacter(string dniValue)
+    private static void CheckLastCharacterIfItIsValid(string dniValue)
     {
         if (EXCLUDE_LAST_CHARS.Contains(dniValue[^1])) 
             throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
     }
 
+    private static bool IsFirstCharacterALetter(string dniValue) 
+        => char.IsLetter(dniValue[0]);
+
+    private static bool IsFirstLetterCorrect(string dniValue) 
+    {
+        if (IsFirstCharacterALetter(dniValue) && VALIDS_FIRST_CHARS.Contains(dniValue[0]))
+            return true;
+
+        return false;
+    }
+
     private static void CheckIfCorrectFirstCharacter(string dniValue)
     {
-        if (char.IsLetter(dniValue[0]) && !VALIDS_FIRST_CHARS.Contains(dniValue[0]))
+        if (!IsFirstLetterCorrect(dniValue)) 
             throw new ArgumentException("The first character cannot be a character except X, Y or Z.");
     }
 
@@ -49,4 +61,5 @@ public class Dni
                 throw new ArgumentException("First 8 character should be int, first one can be X, Y, Z for NIE.");
         }
     }
+
 }
