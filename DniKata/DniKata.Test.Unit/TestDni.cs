@@ -124,34 +124,16 @@ public class TestDni
             .WithMessage("Invalid letter.");
     }
 
-    [Fact]
-    public void WhenFirstLetterIsX_ItConvertTo0_And_IFModOf23IntPartIs0_ShouldThrowExceptionIfTheLetterIsNot_T()
+    [Theory]
+    [InlineData("X0000000R")]
+    [InlineData("Y0000000P")]
+    [InlineData("Z0000000P")]
+    public void WhenFirstLetterIsXYZ_ItConvertTo012_And_IFModOf23IntPartIs012_ShouldThrowExceptionIfTheLetterIsNot_TRW(string value)
     {
-        Action act = () => new Dni("X0000000R");
+        Action act = () => new Dni(value);
 
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("Invalid letter.");
     }
-
-    [Fact]
-    public void WhenFirstLetterIsY_ItConvertTo1_And_IFModOf23IntPartIs1_ShouldThrowExceptionIfTheLetterIsNot_R()
-    {
-        Action act = () => new Dni("Y0000000P");
-
-        act.Should()
-            .Throw<ArgumentException>()
-            .WithMessage("Invalid letter.");
-    }
-    
-    [Fact]
-    public void WhenFirstLetterIsZ_ItConvertTo2_And_IFModOf23IntPartIs2_ShouldThrowExceptionIfTheLetterIsNot_W()
-    {
-        Action act = () => new Dni("Y0000000P");
-
-        act.Should()
-            .Throw<ArgumentException>()
-            .WithMessage("Invalid letter.");
-    }
-
 }

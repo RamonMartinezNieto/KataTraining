@@ -5,6 +5,8 @@ namespace DniKata;
 
 public class Dni
 {
+    public string DniValue { get; }
+
     private const int MAX_DNI_LENGTH = 9;
     private static readonly char[] EXCLUDE_LAST_CHARS = { 'I', 'O', 'U', 'Ñ' };
     private static readonly char[] VALIDS_FIRST_CHARS = { 'X', 'Y', 'Z' };
@@ -51,6 +53,8 @@ public class Dni
         CheckIntCharsInDni(dniValue);
         CheckIfCorrectFirstCharacter(dniValue);
         CheckIfValidLastLetter(dniValue);
+
+        DniValue = dniValue;
     }
 
     private static void CheckIfValidLastLetter(string dniValue)
@@ -119,5 +123,4 @@ public class Dni
                 throw new ArgumentException("First 8 character should be int, first one can be X, Y, Z for NIE.");
         }
     }
-
 }
