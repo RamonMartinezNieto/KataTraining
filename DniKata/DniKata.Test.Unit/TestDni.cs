@@ -90,11 +90,31 @@ public class TestDni
            .WithMessage("First 8 character should be int, first one can be X, Y, Z for NIE.");
     }
 
+    //all sad path to check exception if the las letter is incorrect
     [Theory]
     [InlineData("00000000R")]
     [InlineData("00000001S")]
     [InlineData("00000002S")]
     [InlineData("00000003P")]
+    [InlineData("00000004P")]
+    [InlineData("00000005P")]
+    [InlineData("00000006P")]
+    [InlineData("00000007P")]
+    [InlineData("00000008Z")]    
+    [InlineData("00000009R")]
+    [InlineData("00000010R")]
+    [InlineData("00000011S")]
+    [InlineData("00000012S")]
+    [InlineData("00000013S")]
+    [InlineData("00000014S")]
+    [InlineData("00000015T")]
+    [InlineData("00000016S")]
+    [InlineData("00000017S")]
+    [InlineData("00000018S")]
+    [InlineData("00000019S")]
+    [InlineData("00000020S")]
+    [InlineData("00000021S")]
+    [InlineData("00000022S")]
     public void WhenModOf23IntPart_Is0_ShouldBeComparedWithTheLetter_T(string value)
     {
         Action act = () => new Dni(value);
