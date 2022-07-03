@@ -82,4 +82,14 @@ public class TestDni
             .Throw<ArgumentException>()
             .WithMessage("The last character cannot be U, I, O, or Ñ.");
     }
+
+    [Fact]
+    public void LastCharacter_CannotBe_Eje_NWithTilde() 
+    {
+        Action act = () => new Dni("34272318Ñ"); //sad path
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("The last character cannot be U, I, O, or Ñ.");
+    }
 }
