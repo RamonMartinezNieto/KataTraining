@@ -24,10 +24,3 @@ public class TestDni
     }
 
 }
-
-internal class Dni
-{
-    public Dni(string v)
-    {
-    }
-}
