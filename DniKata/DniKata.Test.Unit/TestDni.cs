@@ -90,10 +90,14 @@ public class TestDni
            .WithMessage("First 8 character should be int, first one can be X, Y, Z for NIE.");
     }
 
-    //[Fact]
-    //public void ShouldThrowException_IfCannotConvertX_To0() 
-    //{
-    //    Action act = () => new Dni("X0000000R");
-    //}
+    [Fact]
+    public void ModOf23IntPart_ShouldBeComparedWithTheLetter_T()
+    {
+        Action act = () => new Dni("00000000R");
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Invalid letter.");
+    }
 
 }

@@ -16,6 +16,13 @@ public class Dni
         CheckIntCharsInDni(dniValue);
         CheckIfCorrectFirstCharacter(dniValue);
 
+        if (!IsFirstCharacterALetter(dniValue)) { 
+            int tempDniValue = Convert.ToInt32(dniValue[0..7]);
+            if (tempDniValue % 23 == 0 && !dniValue[^1].Equals('T'))
+            {
+                throw new ArgumentException("Invalid letter.");
+            }
+        }
     }
 
     private static void CheckCorrectLength(string dniValue)
@@ -40,16 +47,11 @@ public class Dni
         => char.IsLetter(dniValue[0]);
 
     private static bool IsFirstLetterCorrect(string dniValue) 
-    {
-        if (IsFirstCharacterALetter(dniValue) && VALIDS_FIRST_CHARS.Contains(dniValue[0]))
-            return true;
-
-        return false;
-    }
+        => VALIDS_FIRST_CHARS.Contains(dniValue[0]);
 
     private static void CheckIfCorrectFirstCharacter(string dniValue)
     {
-        if (!IsFirstLetterCorrect(dniValue)) 
+        if (IsFirstCharacterALetter(dniValue) && !IsFirstLetterCorrect(dniValue)) 
             throw new ArgumentException("The first character cannot be a character except X, Y or Z.");
     }
 
