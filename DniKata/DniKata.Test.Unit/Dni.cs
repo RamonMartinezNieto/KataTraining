@@ -3,6 +3,7 @@
 internal class Dni
 {
     private const int MAX_DNI_LENGTH = 9;
+    private static readonly char[] EXCLUDE_LAST_CHARS = { 'I', 'O', 'U', 'Ñ' };
 
     public Dni(string dniValue)
     {
@@ -24,27 +25,12 @@ internal class Dni
             throw new ArgumentException("Last character should be a character.");
     }
 
-
     private static void CheckLastCharacter(string dniValue)
     {
-        if (dniValue[^1].Equals('U'))
+        foreach (char excludeChar in EXCLUDE_LAST_CHARS) 
         {
-            throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
-        }
-
-        if (dniValue[^1].Equals('I'))
-        {
-            throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
-        }
-
-        if (dniValue[^1].Equals('O'))
-        {
-            throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
-        }
-
-        if (dniValue[^1].Equals('Ñ'))
-        {
-            throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
+            if (dniValue[^1].Equals(excludeChar))
+                throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
         }
     }
 }
