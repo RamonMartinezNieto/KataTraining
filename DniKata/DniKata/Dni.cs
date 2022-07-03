@@ -1,16 +1,18 @@
-﻿namespace DniKata;
+﻿using System.Linq;
+
+namespace DniKata;
 
 public class Dni
 {
     private const int MAX_DNI_LENGTH = 9;
     private static readonly char[] EXCLUDE_LAST_CHARS = { 'I', 'O', 'U', 'Ñ' };
+    private static readonly char[] VALIDS_FIRST_CHARS = { 'X', 'Y', 'Z' };
 
     public Dni(string dniValue)
     {
         CheckCorrectLength(dniValue);
         CheckIfLastCharacterIsLetter(dniValue);
         CheckLastCharacter(dniValue);
-
         CheckIfCorrectFirstCharacter(dniValue);
     }
 
@@ -38,11 +40,7 @@ public class Dni
 
     private static void CheckIfCorrectFirstCharacter(string dniValue)
     {
-        var firstCharacter = dniValue[0];
-        if (char.IsLetter(firstCharacter))
-        {
-            if (!firstCharacter.Equals('X') && !firstCharacter.Equals('Y') && !firstCharacter.Equals('Z'))
-                throw new ArgumentException("The first character cannot be a character except X, Y or Z.");
-        }
+        if (char.IsLetter(dniValue[0]) && !VALIDS_FIRST_CHARS.Contains(dniValue[0]))
+            throw new ArgumentException("The first character cannot be a character except X, Y or Z.");
     }
 }
