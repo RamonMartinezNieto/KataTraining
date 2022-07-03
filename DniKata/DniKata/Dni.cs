@@ -20,6 +20,9 @@ public class Dni
 
         if (char.IsLetter(dniValue[2]))
             throw new ArgumentException("First 8 character should be int, first one can be X, Y, Z for NIE.");
+        
+        if (char.IsLetter(dniValue[3]))
+            throw new ArgumentException("First 8 character should be int, first one can be X, Y, Z for NIE.");
     }
 
 

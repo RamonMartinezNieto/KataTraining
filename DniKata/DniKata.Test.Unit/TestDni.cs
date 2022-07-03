@@ -92,4 +92,14 @@ public class TestDni
            .Throw<ArgumentException>()
            .WithMessage("First 8 character should be int, first one can be X, Y, Z for NIE.");
     }
+
+    [Fact]
+    public void Fourth_Char_Should_Be_Int() 
+    {
+        Action act = () => new Dni("313R2318H");
+
+        act.Should()
+           .Throw<ArgumentException>()
+           .WithMessage("First 8 character should be int, first one can be X, Y, Z for NIE.");
+    }
 }
