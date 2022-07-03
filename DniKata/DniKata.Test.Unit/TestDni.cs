@@ -73,33 +73,21 @@ public class TestDni
         Dni dni = new (value); 
     }
 
-    [Fact]
-    public void Second_Char_Should_Be_Int() 
+    [Theory]
+    [InlineData("3R272318H")]
+    [InlineData("30R72318H")]
+    [InlineData("302R2318H")]
+    [InlineData("3027R318H")]
+    [InlineData("30272R18H")]
+    [InlineData("302723R8H")]
+    [InlineData("3027231RH")]
+    public void Characters_1To7_ShouldBeInt(string value) 
     {
-        Action act = () => new Dni("3Z272318H");
+        Action act = () => new Dni(value);
 
         act.Should()
            .Throw<ArgumentException>()
            .WithMessage("First 8 character should be int, first one can be X, Y, Z for NIE.");
     }
 
-    [Fact]
-    public void Third_Char_Should_Be_Int() 
-    {
-        Action act = () => new Dni("31R72318H");
-
-        act.Should()
-           .Throw<ArgumentException>()
-           .WithMessage("First 8 character should be int, first one can be X, Y, Z for NIE.");
-    }
-
-    [Fact]
-    public void Fourth_Char_Should_Be_Int() 
-    {
-        Action act = () => new Dni("313R2318H");
-
-        act.Should()
-           .Throw<ArgumentException>()
-           .WithMessage("First 8 character should be int, first one can be X, Y, Z for NIE.");
-    }
 }
