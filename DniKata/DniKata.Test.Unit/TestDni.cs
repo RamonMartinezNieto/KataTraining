@@ -17,25 +17,18 @@ namespace DniKata.Test.Unit;
 public class TestDni
 {
 
-    [Fact]
-    public void Lenght_ShouldBe_LessThanTen() 
+    [Theory]
+    [InlineData("342723180H")]
+    [InlineData("3427231H")]
+    public void Lenght_ShouldBe_Nine(string value) 
     {
-        Action act = () => new Dni("342723180H"); //wrong DNI 
+        Action act = () => new Dni(value);
 
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("Lenght should be nine.");
     }
     
-    [Fact]
-    public void Lenght_ShouldBe_MoreThanEight() 
-    {
-        Action act = () => new Dni("3427231H"); //wrong DNI 
-
-        act.Should()
-            .Throw<ArgumentException>()
-            .WithMessage("Lenght should be nine.");
-    }
 
     [Fact]
     public void LastCharacter_ShoulBe_Character() 
