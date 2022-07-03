@@ -11,13 +11,7 @@ public class Dni
         CheckIfLastCharacterIsLetter(dniValue);
         CheckLastCharacter(dniValue);
 
-        var firstCharacter = dniValue[0];
-        if (char.IsLetter(firstCharacter))
-        {
-            if (!firstCharacter.Equals('X') && !firstCharacter.Equals('Y') && !firstCharacter.Equals('Z'))
-                throw new ArgumentException("The first character cannot be a character except X, Y or Z.");
-
-        }
+        CheckIfCorrectFirstCharacter(dniValue);
     }
 
 
@@ -39,6 +33,16 @@ public class Dni
         {
             if (dniValue[^1].Equals(excludeChar))
                 throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
+        }
+    }
+
+    private static void CheckIfCorrectFirstCharacter(string dniValue)
+    {
+        var firstCharacter = dniValue[0];
+        if (char.IsLetter(firstCharacter))
+        {
+            if (!firstCharacter.Equals('X') && !firstCharacter.Equals('Y') && !firstCharacter.Equals('Z'))
+                throw new ArgumentException("The first character cannot be a character except X, Y or Z.");
         }
     }
 }
