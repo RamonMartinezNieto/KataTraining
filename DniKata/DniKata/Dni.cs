@@ -31,11 +31,8 @@ public class Dni
 
     private static void CheckLastCharacter(string dniValue)
     {
-        foreach (char excludeChar in EXCLUDE_LAST_CHARS)
-        {
-            if (dniValue[^1].Equals(excludeChar))
-                throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
-        }
+        if (EXCLUDE_LAST_CHARS.Contains(dniValue[^1])) 
+            throw new ArgumentException("The last character cannot be U, I, O, or Ñ.");
     }
 
     private static void CheckIfCorrectFirstCharacter(string dniValue)
