@@ -43,4 +43,13 @@ public class TestDni
             .WithMessage("Lenght should be nine.");
     }
 
+    [Fact]
+    public void LastCharacter_ShoulBe_Character() 
+    {
+        Action act = () => new Dni("342723180"); //sad path
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Last character should be a character.");
+    }
 }

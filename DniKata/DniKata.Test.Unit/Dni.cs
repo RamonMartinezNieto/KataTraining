@@ -7,6 +7,12 @@ internal class Dni
     public Dni(string dniValue)
     {
         CheckCorrectLength(dniValue);
+
+        if (!char.IsLetter(dniValue[^1]))
+        {
+            throw new ArgumentException("Last character should be a character.");
+        }
+
     }
 
     private static void CheckCorrectLength(string dniValue)
