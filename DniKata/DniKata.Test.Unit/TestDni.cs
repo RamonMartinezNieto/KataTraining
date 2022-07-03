@@ -122,6 +122,16 @@ public class TestDni
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("Invalid letter.");
+    }
+
+    [Fact]
+    public void WhenFirstLetterIsX_ItConvertTo0_And_IFModOf23IntPartIs0_ShouldBeComparedWithTheLetter_T()
+    {
+        Action act = () => new Dni("X0000000R");
+
+        act.Should()
+            .Throw<ArgumentException>()
+            .WithMessage("Invalid letter.");
     }    
     
 }
