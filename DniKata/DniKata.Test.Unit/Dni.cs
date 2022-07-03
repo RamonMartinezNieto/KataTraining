@@ -6,11 +6,7 @@ internal class Dni
 
     public Dni(string v)
     {
-        if (v.Length > MAX_DNI_LENGTH)
+        if (!v.Length.Equals(MAX_DNI_LENGTH))
             throw new ArgumentException("Lenght should be nine.");
-
-        if (v.Length < MAX_DNI_LENGTH)
-            throw new ArgumentException("Lenght should be nine.");
-
     }
 }
