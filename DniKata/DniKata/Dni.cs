@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace DniKata;
 
@@ -7,6 +8,13 @@ public class Dni
     private const int MAX_DNI_LENGTH = 9;
     private static readonly char[] EXCLUDE_LAST_CHARS = { 'I', 'O', 'U', 'Ñ' };
     private static readonly char[] VALIDS_FIRST_CHARS = { 'X', 'Y', 'Z' };
+
+    private static Dictionary<int, char> LETTERS_RULES = new()
+    {
+        {0,'T'},
+        {1,'R'},
+        {2,'W'},
+    };
 
     public Dni(string dniValue)
     {
@@ -25,19 +33,12 @@ public class Dni
         {
             int tempDniValue = Convert.ToInt32(dniValue[0..7]);
 
-            if (tempDniValue % 23 == 0 && !dniValue[^1].Equals('T'))
+            foreach (var item in LETTERS_RULES) 
             {
-                throw new ArgumentException("Invalid letter.");
-            }
-
-            if (tempDniValue % 23 == 1 && !dniValue[^1].Equals('R'))
-            {
-                throw new ArgumentException("Invalid letter.");
-            }
-
-            if (tempDniValue % 23 == 1 && !dniValue[^1].Equals('W'))
-            {
-                throw new ArgumentException("Invalid letter.");
+                if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
+                {
+                    throw new ArgumentException("Invalid letter.");
+                }
             }
         }
     }
