@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace DniKata;
+﻿namespace DniKata;
 
 public class Dni
 {
@@ -59,7 +56,7 @@ public class Dni
 
     private static void CheckIfValidLastLetter(string dniValue)
     {
-        int tempDniValue = 0;
+        int? tempDniValue = null;
 
         if (IsFirstCharacterALetter(dniValue))
         {
@@ -67,7 +64,7 @@ public class Dni
             {
                 if (dniValue[0].Equals(item.Value))
                 {
-                    tempDniValue = Convert.ToInt32(dniValue[1..8]) + item.Key;
+                    tempDniValue = Convert.ToInt32(item.Key + dniValue[1..8]);
                 }
             }
         }

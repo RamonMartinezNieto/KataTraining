@@ -64,9 +64,9 @@ public class TestDni
     }
 
     [Theory]
-    [InlineData("X0000000T")] //happy path
-    [InlineData("Y0000000R")] //happy path
-    [InlineData("Z0000000W")] //happy path
+    [InlineData("X0098688H")] //happy path
+    [InlineData("Y9661016H")] //happy path
+    [InlineData("Z5090857L")] //happy path
     public void FirstCharacter_CanBe_XYZ(string value)
     {
         // no exception, test pass if there isn't a exception  and fail with an exceptioin
@@ -135,5 +135,41 @@ public class TestDni
         act.Should()
             .Throw<ArgumentException>()
             .WithMessage("Invalid letter.");
+    }
+
+    //All are happy path
+    [Theory]
+    [InlineData("31970165G")]
+    [InlineData("10448738E")]
+    [InlineData("68163822X")]
+    [InlineData("68132163E")]
+    [InlineData("50791233B")]
+    [InlineData("90250990W")]
+    [InlineData("87477013D")]
+    [InlineData("34272318H")]
+    [InlineData("54956042A")]
+    [InlineData("78176129A")]
+    [InlineData("49390008S")]
+    [InlineData("90583399S")]
+    public void ShouldNotThrwoAnyException_WhenDNIIsCorrect(string value) 
+    {
+        //note, in C# if any exception throw the test fail
+        new Dni(value);
+    }    
+    
+    //All are happy path
+    [Theory]
+    [InlineData("Z5090857L")]
+    [InlineData("Y9661016H")]
+    [InlineData("Y1019582Y")]
+    [InlineData("Y2517413P")]
+    [InlineData("Z5470399S")]
+    [InlineData("Y0468622B")]
+    [InlineData("X4326926M")]
+    [InlineData("Z6552219F")]
+    public void ShouldNotThrwoAnyException_WhenNIEIsCorrect(string value) 
+    {
+        //note, in C# if any exception throw the test fail
+        new Dni(value);
     }
 }
