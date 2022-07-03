@@ -14,6 +14,9 @@ public class Dni
         CheckIfLastCharacterIsLetter(dniValue);
         CheckLastCharacter(dniValue);
         CheckIfCorrectFirstCharacter(dniValue);
+
+        if (char.IsLetter(dniValue[1]))
+            throw new ArgumentException("First 8 character should be int or X, Y, Z.");
     }
 
 

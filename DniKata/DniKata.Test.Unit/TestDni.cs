@@ -28,7 +28,6 @@ public class TestDni
             .Throw<ArgumentException>()
             .WithMessage("Lenght should be nine.");
     }
-    
 
     [Fact]
     public void LastCharacter_ShoulBe_Character() 
@@ -64,7 +63,6 @@ public class TestDni
             .WithMessage("The first character cannot be a character except X, Y or Z.");
     }    
 
-        
     [Theory]
     [InlineData("X1404966B")]
     [InlineData("Y1404966B")]
@@ -73,6 +71,15 @@ public class TestDni
     {
         // no exception, test pass if there isn't a exception  and fail with an exceptioin
         Dni dni = new (value); 
-    }    
-    
+    }
+
+    [Fact]
+    public void Second_Char_Should_Be_Int() 
+    {
+        Action act = () => new Dni("3Z272318H");
+
+        act.Should()
+           .Throw<ArgumentException>()
+           .WithMessage("First 8 character should be int or X, Y, Z.");
+    }
 }
