@@ -48,46 +48,30 @@ public class Dni
 
     private static void CheckIfValidLastLetter(string dniValue)
     {
-        int tempDniValue;
+        int tempDniValue = 0;
 
         if (IsFirstCharacterALetter(dniValue)) 
         {
             if (dniValue[0].Equals('X')) 
             {
                 tempDniValue = Convert.ToInt32(dniValue[1..8]);
-
-                foreach (var item in LETTERS_RULES)
-                {
-                    if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
-                    {
-                        throw new ArgumentException("Invalid letter.");
-                    }
-                }
             }  
             
             if (dniValue[0].Equals('Y')) 
             {
                 tempDniValue = Convert.ToInt32(dniValue[1..8]) + 1;
-
-                foreach (var item in LETTERS_RULES)
-                {
-                    if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
-                    {
-                        throw new ArgumentException("Invalid letter.");
-                    }
-                }
             }          
 
             if (dniValue[0].Equals('Z')) 
             {
                 tempDniValue = Convert.ToInt32(dniValue[1..8]) + 2;
+            }
 
-                foreach (var item in LETTERS_RULES)
+            foreach (var item in LETTERS_RULES)
+            {
+                if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
                 {
-                    if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
-                    {
-                        throw new ArgumentException("Invalid letter.");
-                    }
+                    throw new ArgumentException("Invalid letter.");
                 }
             }
         }
