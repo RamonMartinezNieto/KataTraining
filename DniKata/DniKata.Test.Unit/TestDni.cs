@@ -78,27 +78,14 @@ public class TestDni
     }    
 
         
-    [Fact]
-    public void FirstCharacter_CanBe_X()
+    [Theory]
+    [InlineData("X1404966B")]
+    [InlineData("Y1404966B")]
+    [InlineData("Z1404966B")]
+    public void FirstCharacter_CanBe_XYZ(string value)
     {
-        // no exception, test pass if there isn't a exception
-        Dni dni = new ("X1404966B"); 
+        // no exception, test pass if there isn't a exception  and fail with an exceptioin
+        Dni dni = new (value); 
     }    
     
-        
-    [Fact]
-    public void FirstCharacter_CanBe_Y()
-    {
-        // no exception, test pass if there isn't a exception
-        Dni dni = new ("Y1404966B"); 
-    }    
-            
-    [Fact]
-    public void FirstCharacter_CanBe_Z()
-    {
-        // no exception, test pass if there isn't a exception
-        Dni dni = new ("Z1404966B"); 
-    }    
-
-
 }
