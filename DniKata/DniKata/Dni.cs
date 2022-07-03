@@ -57,36 +57,26 @@ public class Dni
     {
         int tempDniValue = 0;
 
-        if (IsFirstCharacterALetter(dniValue)) 
+        if (IsFirstCharacterALetter(dniValue))
         {
-            foreach (var item in FIRST_LETTERS_RULES) 
+            foreach (var item in FIRST_LETTERS_RULES)
             {
                 if (dniValue[0].Equals(item.Value))
                 {
                     tempDniValue = Convert.ToInt32(dniValue[1..8]) + item.Key;
                 }
             }
-
-            foreach (var item in LETTERS_RULES)
-            {
-                if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
-                {
-                    throw new ArgumentException("Invalid letter.");
-                }
-            }
         }
-
-
-        if (!IsFirstCharacterALetter(dniValue))
+        else 
         {
             tempDniValue = Convert.ToInt32(dniValue[0..8]);
+        }
 
-            foreach (var item in LETTERS_RULES) 
+        foreach (var item in LETTERS_RULES) 
+        {
+            if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
             {
-                if (tempDniValue % 23 == item.Key && !dniValue[^1].Equals(item.Value))
-                {
-                    throw new ArgumentException("Invalid letter.");
-                }
+                throw new ArgumentException("Invalid letter.");
             }
         }
     }
