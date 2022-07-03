@@ -34,6 +34,11 @@ public class Dni
             {
                 throw new ArgumentException("Invalid letter.");
             }
+
+            if (tempDniValue % 23 == 1 && !dniValue[^1].Equals('W'))
+            {
+                throw new ArgumentException("Invalid letter.");
+            }
         }
     }
 
